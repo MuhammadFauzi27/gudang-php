@@ -6,22 +6,21 @@ require __DIR__ . '/config/database.php';
 
 require_login();
 
-// ---- Pencarian (GET) ----
 $q = clean_string($_GET['q'] ?? '');
 
 if ($q !== '') {
     $stmt = $pdo->prepare(
-        'SELECT * FROM barang WHERE kode_barang LIKE :q OR nama_barang LIKE :q ORDER BY id DESC'
+            'SELECT * FROM barang WHERE kode_barang LIKE :q_kode OR nama_barang LIKE :q_nama ORDER BY id DESC'
     );
-    $stmt->execute([':q' => '%' . $q . '%']);
+    $like = '%' . $q . '%';
+    $stmt->execute([':q_kode' => $like, ':q_nama' => $like]);
 } else {
     $stmt = $pdo->query('SELECT * FROM barang ORDER BY id DESC');
 }
 $items = $stmt->fetchAll();
 
-// ---- Statistik ringkas ----
 $stat = $pdo->query(
-    'SELECT COUNT(*) AS jenis,
+        'SELECT COUNT(*) AS jenis,
             COALESCE(SUM(jumlah), 0) AS total_stok,
             COALESCE(SUM(jumlah * harga), 0) AS nilai,
             COALESCE(SUM(jumlah < ' . STOK_MINIMUM . '), 0) AS menipis

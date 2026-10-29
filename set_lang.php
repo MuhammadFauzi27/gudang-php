@@ -12,11 +12,9 @@ switch ($lang) {
         $_SESSION['lang'] = 'id';
 }
 
-// Whitelist halaman tujuan (cegah open redirect)
 $allowed = ['index.php', 'create.php', 'edit.php', 'login.php'];
 $back    = basename($_GET['back'] ?? 'index.php');
 
-// edit.php butuh id, jadi kembali ke daftar saja
 if ($back === 'edit.php' || !in_array($back, $allowed, true)) {
     $back = 'index.php';
 }

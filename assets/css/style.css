@@ -1,4 +1,4 @@
-/* ===== Reset & dasar ===== */
+/* Reset & dasar */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
@@ -17,7 +17,7 @@ a { color: #1d4ed8; text-decoration: none; }
 h2 { margin-bottom: 12px; }
 .muted { color: #6b7280; margin-bottom: 16px; }
 
-/* ===== Topbar ===== */
+/* Topbar */
 .topbar { background: #1e3a8a; color: #fff; }
 .topbar-inner {
     display: flex; justify-content: space-between; align-items: center;
@@ -31,7 +31,7 @@ h2 { margin-bottom: 12px; }
 .lang-switch { color: #bfdbfe; }
 .user { color: #fff; }
 
-/* ===== Kartu ===== */
+/* Kartu */
 .card {
     background: #fff; border-radius: 8px; padding: 20px;
     box-shadow: 0 1px 3px rgba(0,0,0,.1); margin-bottom: 20px;
@@ -39,7 +39,7 @@ h2 { margin-bottom: 12px; }
 .card-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
 .card-head h2 { margin-bottom: 0; }
 
-/* ===== Statistik ===== */
+/* Statistik */
 .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 14px; margin-bottom: 20px; }
 .stat-card {
     background: #fff; border-radius: 8px; padding: 16px;
@@ -49,7 +49,7 @@ h2 { margin-bottom: 12px; }
 .stat-card strong { font-size: 22px; }
 .stat-card.warn { border-left-color: #d97706; }
 
-/* ===== Tombol ===== */
+/* Tombol */
 .btn {
     display: inline-block; padding: 8px 14px; border: 1px solid transparent;
     border-radius: 6px; font-size: 14px; cursor: pointer; text-align: center;
@@ -63,12 +63,12 @@ h2 { margin-bottom: 12px; }
 .btn-small { padding: 5px 10px; font-size: 13px; }
 .btn-block { display: block; width: 100%; }
 
-/* ===== Alert ===== */
+/* Alert */
 .alert { padding: 10px 14px; border-radius: 6px; margin-bottom: 16px; font-size: 14px; }
 .alert-success { background: #dcfce7; color: #166534; border: 1px solid #86efac; }
 .alert-error   { background: #fee2e2; color: #991b1b; border: 1px solid #fca5a5; }
 
-/* ===== Form ===== */
+/* Form */
 .form-row { display: flex; gap: 16px; flex-wrap: wrap; }
 .form-group { flex: 1; min-width: 200px; margin-bottom: 14px; }
 .form-group label { display: block; font-weight: bold; margin-bottom: 4px; font-size: 14px; }
@@ -86,10 +86,10 @@ h2 { margin-bottom: 12px; }
     border: 1px solid #d1d5db; border-radius: 6px;
 }
 
-/* ===== Login ===== */
+/* Login */
 .login-card { max-width: 400px; margin: 40px auto; }
 
-/* ===== Tabel ===== */
+/* Tabel */
 .table-wrap { overflow-x: auto; }
 table { width: 100%; border-collapse: collapse; font-size: 14px; }
 th, td { padding: 10px 12px; border-bottom: 1px solid #e5e7eb; text-align: left; white-space: nowrap; }
@@ -103,7 +103,7 @@ tbody tr:hover { background: #f9fafb; }
 .badge { display: inline-block; padding: 1px 7px; border-radius: 10px; font-size: 11px; margin-left: 4px; }
 .badge-warn { background: #fef3c7; color: #92400e; }
 
-/* ===== Footer ===== */
+/* Footer */
 .footer { background: #1f2937; color: #d1d5db; text-align: center; padding: 14px 0; font-size: 13px; }
 
 @media (max-width: 600px) {

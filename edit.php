@@ -7,7 +7,6 @@ require __DIR__ . '/includes/validation.php';
 
 require_login();
 
-// ---- Ambil & validasi id ----
 $id = filter_var($_GET['id'] ?? ($_POST['id'] ?? null), FILTER_VALIDATE_INT, ['options' => ['min_range' => 1]]);
 if ($id === false || $id === null) {
     set_flash('error', 'err_not_found');

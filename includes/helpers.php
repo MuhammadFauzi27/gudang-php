@@ -8,7 +8,6 @@ const KATEGORI_LIST = ['elektronik', 'makanan', 'kemasan', 'kebersihan', 'lainny
 const SATUAN_LIST   = ['pcs', 'box', 'kg', 'liter', 'unit'];
 const STOK_MINIMUM  = 10;
 
-/** Escape output HTML (mencegah XSS). */
 function e($value): string
 {
     return htmlspecialchars((string) $value, ENT_QUOTES, 'UTF-8');
@@ -41,7 +40,6 @@ function get_flash(): ?array
     return $flash;
 }
 
-/** Token CSRF. */
 function csrf_token(): string
 {
     if (empty($_SESSION['csrf_token'])) {

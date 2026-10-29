@@ -1,4 +1,3 @@
--- Ekspor database Sistem Inventaris Gudang
 CREATE DATABASE IF NOT EXISTS db_inventaris_gudang
   CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 USE db_inventaris_gudang;
@@ -27,7 +26,6 @@ CREATE TABLE barang (
                         updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB;
 
--- Password: admin123 (bcrypt)
 INSERT INTO users (username, password, nama_lengkap) VALUES
 ('admin', 'admin123', 'Administrator Gudang');
 

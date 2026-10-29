@@ -2,7 +2,7 @@
 $dbHost = 'localhost';
 $dbName = 'db_inventaris_gudang';
 $dbUser = 'root';
-$dbPass = '';        // Default XAMPP kosong. Sesuaikan jika berbeda.
+$dbPass = '';
 
 try {
     $pdo = new PDO(
@@ -16,6 +16,5 @@ try {
         ]
     );
 } catch (PDOException $e) {
-    // Jangan tampilkan detail error ke pengguna pada aplikasi sungguhan.
     die('Koneksi database gagal / Database connection failed.');
 }

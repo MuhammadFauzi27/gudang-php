@@ -29,7 +29,7 @@ CREATE TABLE barang (
 
 -- Password: admin123 (bcrypt)
 INSERT INTO users (username, password, nama_lengkap) VALUES
-('admin', 'Admin123', 'Administrator Gudang');
+('admin', 'admin123', 'Administrator Gudang');
 
 INSERT INTO barang (kode_barang, nama_barang, kategori, jumlah, satuan, harga, lokasi_rak) VALUES
 ('BRG-001', 'Kardus Ukuran Besar', 'kemasan', 120, 'pcs', 4500.00, 'A-01'),
